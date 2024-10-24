@@ -1,0 +1,45 @@
+### Get all users
+GET http://localhost:3030/users
+Accept: application/json
+
+### Create a new user
+POST http://localhost:3030/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com"
+}
+
+### Delete a user by ID
+DELETE http://localhost:3030/users/1
+
+
+### Get all orders
+GET http://localhost:3030/orders
+Accept: application/json
+
+### Create a new order
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+  "totalAmount": 100.50,
+  "status": "pending"
+}
+
+### Cancel an order
+PATCH http://localhost:3030/orders
+Content-Type: application/json
+
+{
+  "id": 1
+}
+
+### Delete an order by ID
+DELETE http://localhost:3030/orders/1
+
+
+### Get end-of-day report
+GET http://localhost:3030/orders/end-of-day-report
+Accept: application/json
